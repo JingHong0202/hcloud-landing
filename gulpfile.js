@@ -60,7 +60,7 @@ gulp.task('compressMedia', () => {
 })
 
 gulp.task('fontspider', function () {
-  return gulp.src(['./index.html']).pipe(fontSpider({ backup: false }))
+  return gulp.src(['./static/fonts/*']).pipe(gulp.dest('./dist/static/fonts'))
 })
 
 gulp.task(
