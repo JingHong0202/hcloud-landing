@@ -101,21 +101,21 @@ function hoverTilt() {
 }
 
 // Testimonial Slider
-function testimonialSlider() {
-  var tSlider = $('.testimonial-slider')
-  if (tSlider.length) {
-    tSlider.owlCarousel({
-      loop: true,
-      nav: false,
-      dots: true,
-      autoplay: true,
-      autoplayTimeout: 4000,
-      autoplaySpeed: 1000,
-      lazyLoad: true,
-      items: 1
-    })
-  }
-}
+// function testimonialSlider() {
+//   var tSlider = $('.testimonial-slider')
+//   if (tSlider.length) {
+//     tSlider.owlCarousel({
+//       loop: true,
+//       nav: false,
+//       dots: true,
+//       autoplay: true,
+//       autoplayTimeout: 4000,
+//       autoplaySpeed: 1000,
+//       lazyLoad: true,
+//       items: 1
+//     })
+//   }
+// }
 
 // Apps Screenshot Slider
 function screenshotSlider() {
@@ -147,57 +147,57 @@ function screenshotSlider() {
   }
 }
 
-//Contact Form Validation
-function contactFormValidation() {
-  var activeForm = $('.form-validation')
-  if (activeForm.length) {
-    activeForm.validate({
-      // initialize the plugin
-      rules: {
-        sub: {
-          required: true
-        },
-        email: {
-          required: true,
-          email: true
-        },
-        message: {
-          required: true
-        }
-      },
-      submitHandler: function (form) {
-        $(form).ajaxSubmit({
-          success: function () {
-            $('.form-validation :input').attr('disabled', 'disabled')
-            activeForm.fadeTo('slow', 1, function () {
-              $(this).find(':input').attr('disabled', 'disabled')
-              $(this).find('label').css('cursor', 'default')
-              $('#alert-success').fadeIn()
-            })
-          },
-          error: function () {
-            activeForm.fadeTo('slow', 1, function () {
-              $('#alert-error').fadeIn()
-            })
-          }
-        })
-      }
-    })
-  }
-}
+// //Contact Form Validation
+// function contactFormValidation() {
+//   var activeForm = $('.form-validation')
+//   if (activeForm.length) {
+//     activeForm.validate({
+//       // initialize the plugin
+//       rules: {
+//         sub: {
+//           required: true
+//         },
+//         email: {
+//           required: true,
+//           email: true
+//         },
+//         message: {
+//           required: true
+//         }
+//       },
+//       submitHandler: function (form) {
+//         $(form).ajaxSubmit({
+//           success: function () {
+//             $('.form-validation :input').attr('disabled', 'disabled')
+//             activeForm.fadeTo('slow', 1, function () {
+//               $(this).find(':input').attr('disabled', 'disabled')
+//               $(this).find('label').css('cursor', 'default')
+//               $('#alert-success').fadeIn()
+//             })
+//           },
+//           error: function () {
+//             activeForm.fadeTo('slow', 1, function () {
+//               $('#alert-error').fadeIn()
+//             })
+//           }
+//         })
+//       }
+//     })
+//   }
+// }
 
 // Close suddess Alret
-function closeSuccessAlert() {
-  var closeButton = $('.closeAlert')
-  if (closeButton.length) {
-    closeButton.on('click', function () {
-      $('.alert-wrapper').fadeOut()
-    })
-    closeButton.on('click', function () {
-      $('.alert-wrapper').fadeOut()
-    })
-  }
-}
+// function closeSuccessAlert() {
+//   var closeButton = $('.closeAlert')
+//   if (closeButton.length) {
+//     closeButton.on('click', function () {
+//       $('.alert-wrapper').fadeOut()
+//     })
+//     closeButton.on('click', function () {
+//       $('.alert-wrapper').fadeOut()
+//     })
+//   }
+// }
 
 // partical JS Bg
 function particalBGone() {
@@ -615,10 +615,10 @@ jQuery(document).on('ready', function () {
     wowAnimation()
     hoverTilt()
     BannerSlider()
-    testimonialSlider()
+    // testimonialSlider()
     screenshotSlider()
-    contactFormValidation()
-    closeSuccessAlert()
+    // contactFormValidation()
+    // closeSuccessAlert()
 
   })(jQuery)
 })
